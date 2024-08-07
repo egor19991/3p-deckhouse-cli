@@ -345,9 +345,9 @@ func PullDeckhouseToLocalFS(
 	}
 
 	log.InfoLn("Pulling Trivy vulnerability databases...\n")
-	if err = layouts.PullTrivyVulnerabilityDatabasesImages(pullCtx, imageLayouts); err != nil {
-		return fmt.Errorf("pull vulnerability database: %w", err)
-	}
+	// if err = layouts.PullTrivyVulnerabilityDatabasesImages(pullCtx, imageLayouts); err != nil {
+	// 	return fmt.Errorf("pull vulnerability database: %w", err)
+	// }
 	log.InfoLn("Trivy vulnerability databases pulled")
 
 	if !pullCtx.SkipModulesPull {
